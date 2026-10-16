@@ -24,3 +24,9 @@ python3 gguf_bench.py --dir models --threads 4
 ```
 
 输出每个版本的文件大小、峰值内存、困惑度（固定一段中文文本）、10 道常识题正确数和生成速度。fp16 版峰值内存约 1.7GB，其余 < 1.2GB。
+
+## 延伸实验（第二版文章新增）
+
+```bash
+python3 gptq_mini.py && python3 test_gptq.py   # 用 numpy 实现 GPTQ 误差补偿，对比就近取整
+```

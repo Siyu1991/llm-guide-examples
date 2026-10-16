@@ -10,3 +10,9 @@ python3 measure_tokens.py   # 估算每一步的输入 token（可选 pip instal
 
 - 有 `OPENAI_API_KEY` 时走 OpenAI 兼容的 `chat/completions` + `tools` 接口（可用 `OPENAI_BASE_URL`、`OPENAI_MODEL` 指向其他兼容服务）。
 - 没有密钥时用 `MockLLM`：它用规则生成与真实接口相同格式的 `tool_calls`，只用于演示循环结构，不代表模型能力。
+
+## 延伸实验（第二版文章新增）
+
+```bash
+pip install tiktoken && python3 trim_results.py   # 工具返回值精简前后的 token 对比
+```

@@ -16,3 +16,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 
 `server_raw.py` 只实现了 tools 的最小子集，用于教学；生产环境请使用官方 SDK。
+
+## 延伸实验（第二版文章新增）
+
+```bash
+python3 tool_audit.py   # 工具数量与固定前缀 token；第三方工具描述的简单审查
+```

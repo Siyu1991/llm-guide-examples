@@ -13,3 +13,10 @@ python3 test_rag_eval.py
 ```
 
 可选：设置 `OPENAI_API_KEY`（以及兼容接口的 `OPENAI_BASE_URL`、`OPENAI_MODEL`）后用大模型当裁判；不设置时使用离线规则裁判，结果可复现。
+
+## 延伸实验（第二版文章新增）
+
+```bash
+python3 paired_and_refusal.py   # 配对 McNemar 检验、裁判校准（kappa）、无答案题拒答阈值
+python3 test_paired.py
+```

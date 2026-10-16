@@ -9,3 +9,9 @@
 python3 simulate.py   # 纯标准库，约 0.3 秒
 python3 test_guard.py
 ```
+
+## 延伸实验（第二版文章新增）
+
+```bash
+python3 sweep.py && python3 test_sweep.py   # 每步成功率、校验发现率、步数三个旋钮的敏感性
+```
