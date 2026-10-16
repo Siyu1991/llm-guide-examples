@@ -6,6 +6,17 @@
 
 ## 目录
 
+### 第 2-7 期
+
+| 目录 | 对应专栏 | 内容 | 依赖 |
+| --- | --- | --- | --- |
+| `ep02_moe/` | 第 2 期 MoE | numpy 实现的最小 MoE 层，实测与稠密 FFN 的耗时，路由偏置均衡 | numpy |
+| `ep03_long_context/` | 第 3 期 长上下文 | 注意力 prefill 耗时随长度增长实测、KV 缓存计算、合同审阅成本 | numpy |
+| `ep04_reasoning/` | 第 4 期 推理模型 | 思考 token 成本、自洽投票正确率、推理强度探针（API 或离线 mock） | 标准库 |
+| `ep05_embedding/` | 第 5 期 Embedding | BM25 与 bge-small-zh 向量检索对比、暴力检索延迟 | fastembed、jieba |
+| `ep06_rag/` | 第 6 期 RAG | 最小 RAG：切块、向量检索、带出处的生成（API 或离线抽取） | fastembed |
+| `ep07_rag_advanced/` | 第 7 期 RAG 进阶 | 切块方式、混合检索 RRF、交叉编码器重排、元数据过滤 | fastembed、jieba |
+
 ### 第 8-15 期
 
 | 目录 | 期数 | 内容 | 依赖 |
