@@ -90,6 +90,13 @@ def generate_offline(q, hits, emb):
     j = int(np.argmax(S))
     return f"{cands[j][0]} [{cands[j][1]}]", {"mode": "offline-extractive"}
 
+def check_numbers(answer, hits):
+    """后处理核对：回答中的每个数字，必须出现在它所引用的 [编号] 片段里；没标编号时对照全部片段。返回找不到依据的数字。"""
+    cited = [int(i) for i in re.findall(r"\[(\d+)\]", answer) if 0 < int(i) <= len(hits)]
+    pool = "".join(hits[i - 1]["text"] for i in cited) if cited else "".join(h["text"] for h in hits)
+    body = re.sub(r"\[\d+\]", "", answer)
+    return [n for n in re.findall(r"\d+(?:\.\d+)?", body) if n not in pool]
+
 def evaluate(index, qs, k=4):
     hit = 0; rows = []
     for item in qs:
@@ -116,6 +123,8 @@ def main():
         else:
             ans, usage = generate_offline(a.question, hits, idx.emb)
         print("\n答：", ans, "\n用量：", usage, f"\n提示长度：{len(prompt)} 字符")
+        bad = check_numbers(ans, hits)
+        print("数字核对：", "通过" if not bad else f"以下数字在所引片段中找不到：{bad}")
     else:
         qs = json.load(open(os.path.join(here, "questions.json"), encoding="utf-8"))
         rate, rows = evaluate(idx, qs, a.k)
