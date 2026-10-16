@@ -3,7 +3,7 @@
 对应专栏第 14 期。
 
 ```bash
-python3 bandwidth_bench.py              # 只需 numpy：实测内存带宽，估算各尺寸模型的生成速度上限
+python3 bandwidth_bench.py              # 只需 numpy：实测内存带宽，估算速度上限（峰值内存约 1.6GB，可用 --mb 调整）
 pip install llama-cpp-python            # CPU 版
 python3 thread_bench.py --model 模型路径/qwen2.5-0.5b-instruct-q4_k_m.gguf
 ```

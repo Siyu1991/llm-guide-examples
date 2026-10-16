@@ -1,7 +1,7 @@
 """端侧推理为什么"看内存带宽"：解码每生成 1 个 token，都要把全部权重从内存读一遍。
 本脚本实测本机：1) 内存拷贝带宽；2) 用 numpy 做矩阵×向量（解码的核心运算），测有效带宽；
 3) 用公式 速度上限 ≈ 有效带宽 / 每 token 读取的权重字节数，估算不同大小模型的 token/s 上限。
-默认占用约 600MB 内存，可用 --mb 调小。"""
+默认 512MB 测试矩阵，峰值内存约 1GB；矩阵太小会落进 CPU 缓存，测出的带宽虚高。"""
 import argparse, json, os, platform, time
 import numpy as np
 
@@ -19,7 +19,7 @@ def gemv_bw(mb, dtype):
     return W.nbytes / best / 1e9
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("--mb", type=int, default=256); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--mb", type=int, default=512, help="测试矩阵大小(MB)。太小会落进 CPU 缓存，测出的带宽虚高"); a = ap.parse_args()
     cb = copy_bw(a.mb); g32 = gemv_bw(a.mb, np.float32)
     print(f"机器：{platform.machine()}，{os.cpu_count()} 个逻辑核")
     print(f"内存拷贝带宽 ≈ {cb:.1f} GB/s；fp32 矩阵×向量有效带宽 ≈ {g32:.1f} GB/s")
