@@ -29,3 +29,9 @@
 | `ep13_quantization/` | 13 量化与本地部署 | numpy 量化误差实验；GGUF 四种量化实测 | numpy / llama-cpp-python |
 | `ep14_small_models/` | 14 小模型与端侧 | 内存带宽实测与速度上限估算；线程数与预填充实测 | numpy / llama-cpp-python |
 | `ep15_interpretability/` | 15 可解释性入门 | 系数、积分梯度、置换重要性、线性探针 | numpy |
+
+### 第 16 期起（辅线·商业化）
+
+| 目录 | 期数 | 内容 | 依赖 |
+| --- | --- | --- | --- |
+| `ep16_pricing/` | 16 AI 产品怎么定价 | 按席位 / 按 token / 按结果的单位经济模拟：重尾用量、Agent 渗透、保本解决率 | numpy |
