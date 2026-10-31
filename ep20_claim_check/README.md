@@ -1,10 +1,8 @@
-# ep20_claim_check
+# ep20 主张拆解与来源依赖
 
-主张 / 证据 CSV → 通过、失败、未知。独立证据按 `source_id` 去重。
-
-## 运行
+离线检查：比较级拆句、独立证据计数、按合格结果重算单价。不访问网络。
 
 ```bash
-python claim_check.py
-python -m pytest -q
+python3 claim_check.py
+python3 test_claim_check.py
 ```

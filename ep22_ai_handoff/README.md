@@ -1,10 +1,8 @@
-# ep22_ai_handoff
+# ep22 AI 编程交付小例子：CSV 按月汇总
 
-AI 编程交付：验收条件表 + 对 CSV 做汇总的可测脚本。
-
-## 运行
+先写验收条件与测试，再实现。标准库 only。
 
 ```bash
-python run_demo.py
-python -m pytest -q
+python3 run_demo.py
+python3 test_csv_summary.py
 ```

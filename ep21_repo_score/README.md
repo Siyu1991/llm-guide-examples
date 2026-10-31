@@ -1,10 +1,8 @@
-# ep21_repo_score
+# ep21 开源项目采纳打分（本地 fixture）
 
-对本地 fixture 仓库打「可撤回试点」分：许可证、测试、CI、最近提交。
-
-## 运行
+对 `fixture/` 里的 README 与 CI 摘要做启发式打分。不访问 GitHub API。
 
 ```bash
-python score_repo.py
-python -m pytest -q
+python3 score_repo.py
+python3 test_score_repo.py
 ```
