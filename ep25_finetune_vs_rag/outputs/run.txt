@@ -1,0 +1,22 @@
+=== 微调 / RAG / 提示词 成本对比 ===
+价格快照: OpenAI gpt-4.1 FT 训练 $25.0/MTok, FT 推理 $3.0/$12.0; 基线 $2.0/$10.0; embed $0.13/MTok
+
+## 客服 FAQ（知识常变）
+  推荐: rag  分数={'prompt': 0, 'rag': 4, 'finetune': -2}
+  prompt    setup=$0.0      monthly=$430.0    year1=$5160.0
+  rag       setup=$0.65     monthly=$410.13   year1=$4922.21
+  finetune  setup=$36.0     monthly=$300.0    year1=$3636.0
+
+## 内部公文风格改写（知识稳）
+  推荐: finetune  分数={'prompt': 0, 'rag': 0, 'finetune': 3}
+  prompt    setup=$0.0      monthly=$60.8     year1=$729.6
+  rag       setup=$0.026    monthly=$84.4013  year1=$1012.8416
+  finetune  setup=$63.0     monthly=$52.8     year1=$696.6
+
+## 小流量试点（先验证）
+  推荐: prompt  分数={'prompt': 3, 'rag': 2, 'finetune': -2}
+  prompt    setup=$0.0      monthly=$4.25     year1=$51.0
+  rag       setup=$0.065    monthly=$33.9565  year1=$407.543
+  finetune  setup=$3.75     monthly=$3.6      year1=$46.95
+
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep25_finetune_vs_rag/outputs/ep25_results.json

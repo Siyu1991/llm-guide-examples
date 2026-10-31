@@ -1,0 +1,24 @@
+=== 结构化抽取 + 校验重试 ===
+attempt 1: FAIL
+  error: 3 validation errors for TicketExtract
+category
+  Input should be 'billing', 'technical', 'account' or 'other' [type=enum
+attempt 2: FAIL
+  error: 4 validation errors for TicketExtract
+priority
+  Input should be 'low', 'medium', 'high' or 'urgent' [type=enum, input_v
+attempt 3: FAIL
+  error: 1 validation error for TicketExtract
+order_id
+  Value error, order_id 形如 ORD-XXXXXX [type=value_error, input_value='1234
+attempt 4: OK
+最终结果:
+{
+  "category": "billing",
+  "priority": "high",
+  "customer_email": "alice@ex.com",
+  "summary": "发票金额不对，需要核对",
+  "order_id": "ORD-99102",
+  "needs_human": false
+}
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep24_structured_output/outputs/ep24_results.json

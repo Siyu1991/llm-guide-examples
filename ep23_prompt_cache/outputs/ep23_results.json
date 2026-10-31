@@ -1,0 +1,621 @@
+{
+  "results": {
+    "openai_gpt61_sol": {
+      "provider": "openai_gpt61_sol",
+      "label": "OpenAI gpt-6.1-sol",
+      "prices": {
+        "input": 2.0,
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "output": 10.0,
+        "has_write_premium": true
+      },
+      "scenario": {
+        "stable_prefix": 8000,
+        "new_per_turn": 1200,
+        "output_per_turn": 400,
+        "turns": 12
+      },
+      "summary": {
+        "total_input_tokens_billed_as_context": 189600,
+        "total_cached_tokens": 167200,
+        "total_write_tokens": 22400,
+        "total_ordinary_tokens": 0,
+        "total_output_tokens": 4800,
+        "cost_with_cache_usd": 0.12072,
+        "cost_without_cache_usd": 0.4272,
+        "savings_usd": 0.30648,
+        "savings_pct": 71.74
+      },
+      "turns": [
+        {
+          "turn": 1,
+          "input_tokens": 9200,
+          "cached_tokens": 0,
+          "write_tokens": 9200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.027,
+          "cost_without_cache": 0.0224
+        },
+        {
+          "turn": 2,
+          "input_tokens": 10400,
+          "cached_tokens": 9200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00792,
+          "cost_without_cache": 0.0248
+        },
+        {
+          "turn": 3,
+          "input_tokens": 11600,
+          "cached_tokens": 10400,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00804,
+          "cost_without_cache": 0.0272
+        },
+        {
+          "turn": 4,
+          "input_tokens": 12800,
+          "cached_tokens": 11600,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00816,
+          "cost_without_cache": 0.0296
+        },
+        {
+          "turn": 5,
+          "input_tokens": 14000,
+          "cached_tokens": 12800,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00828,
+          "cost_without_cache": 0.032
+        },
+        {
+          "turn": 6,
+          "input_tokens": 15200,
+          "cached_tokens": 14000,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.008400000000000001,
+          "cost_without_cache": 0.0344
+        },
+        {
+          "turn": 7,
+          "input_tokens": 16400,
+          "cached_tokens": 15200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00852,
+          "cost_without_cache": 0.0368
+        },
+        {
+          "turn": 8,
+          "input_tokens": 17600,
+          "cached_tokens": 16400,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00864,
+          "cost_without_cache": 0.0392
+        },
+        {
+          "turn": 9,
+          "input_tokens": 18800,
+          "cached_tokens": 17600,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00876,
+          "cost_without_cache": 0.0416
+        },
+        {
+          "turn": 10,
+          "input_tokens": 20000,
+          "cached_tokens": 18800,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.008879999999999999,
+          "cost_without_cache": 0.044
+        },
+        {
+          "turn": 11,
+          "input_tokens": 21200,
+          "cached_tokens": 20000,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.009000000000000001,
+          "cost_without_cache": 0.0464
+        },
+        {
+          "turn": 12,
+          "input_tokens": 22400,
+          "cached_tokens": 21200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00912,
+          "cost_without_cache": 0.048799999999999996
+        }
+      ]
+    },
+    "anthropic_sonnet55": {
+      "provider": "anthropic_sonnet55",
+      "label": "Anthropic Claude Sonnet 5.5",
+      "prices": {
+        "input": 2.0,
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "output": 10.0,
+        "has_write_premium": true
+      },
+      "scenario": {
+        "stable_prefix": 8000,
+        "new_per_turn": 1200,
+        "output_per_turn": 400,
+        "turns": 12
+      },
+      "summary": {
+        "total_input_tokens_billed_as_context": 189600,
+        "total_cached_tokens": 167200,
+        "total_write_tokens": 22400,
+        "total_ordinary_tokens": 0,
+        "total_output_tokens": 4800,
+        "cost_with_cache_usd": 0.12072,
+        "cost_without_cache_usd": 0.4272,
+        "savings_usd": 0.30648,
+        "savings_pct": 71.74
+      },
+      "turns": [
+        {
+          "turn": 1,
+          "input_tokens": 9200,
+          "cached_tokens": 0,
+          "write_tokens": 9200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.027,
+          "cost_without_cache": 0.0224
+        },
+        {
+          "turn": 2,
+          "input_tokens": 10400,
+          "cached_tokens": 9200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00792,
+          "cost_without_cache": 0.0248
+        },
+        {
+          "turn": 3,
+          "input_tokens": 11600,
+          "cached_tokens": 10400,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00804,
+          "cost_without_cache": 0.0272
+        },
+        {
+          "turn": 4,
+          "input_tokens": 12800,
+          "cached_tokens": 11600,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00816,
+          "cost_without_cache": 0.0296
+        },
+        {
+          "turn": 5,
+          "input_tokens": 14000,
+          "cached_tokens": 12800,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00828,
+          "cost_without_cache": 0.032
+        },
+        {
+          "turn": 6,
+          "input_tokens": 15200,
+          "cached_tokens": 14000,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.008400000000000001,
+          "cost_without_cache": 0.0344
+        },
+        {
+          "turn": 7,
+          "input_tokens": 16400,
+          "cached_tokens": 15200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00852,
+          "cost_without_cache": 0.0368
+        },
+        {
+          "turn": 8,
+          "input_tokens": 17600,
+          "cached_tokens": 16400,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00864,
+          "cost_without_cache": 0.0392
+        },
+        {
+          "turn": 9,
+          "input_tokens": 18800,
+          "cached_tokens": 17600,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00876,
+          "cost_without_cache": 0.0416
+        },
+        {
+          "turn": 10,
+          "input_tokens": 20000,
+          "cached_tokens": 18800,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.008879999999999999,
+          "cost_without_cache": 0.044
+        },
+        {
+          "turn": 11,
+          "input_tokens": 21200,
+          "cached_tokens": 20000,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.009000000000000001,
+          "cost_without_cache": 0.0464
+        },
+        {
+          "turn": 12,
+          "input_tokens": 22400,
+          "cached_tokens": 21200,
+          "write_tokens": 1200,
+          "ordinary_tokens": 0,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00912,
+          "cost_without_cache": 0.048799999999999996
+        }
+      ]
+    },
+    "gemini_38_flash": {
+      "provider": "gemini_38_flash",
+      "label": "Google Gemini 3.8 Flash",
+      "prices": {
+        "input": 0.75,
+        "cache_read": 0.075,
+        "cache_write": 0.75,
+        "output": 3.75,
+        "has_write_premium": false
+      },
+      "scenario": {
+        "stable_prefix": 8000,
+        "new_per_turn": 1200,
+        "output_per_turn": 400,
+        "turns": 12
+      },
+      "summary": {
+        "total_input_tokens_billed_as_context": 189600,
+        "total_cached_tokens": 167200,
+        "total_write_tokens": 0,
+        "total_ordinary_tokens": 22400,
+        "total_output_tokens": 4800,
+        "cost_with_cache_usd": 0.04734,
+        "cost_without_cache_usd": 0.1602,
+        "savings_usd": 0.11286,
+        "savings_pct": 70.45
+      },
+      "turns": [
+        {
+          "turn": 1,
+          "input_tokens": 9200,
+          "cached_tokens": 0,
+          "write_tokens": 0,
+          "ordinary_tokens": 9200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0084,
+          "cost_without_cache": 0.0084
+        },
+        {
+          "turn": 2,
+          "input_tokens": 10400,
+          "cached_tokens": 9200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00309,
+          "cost_without_cache": 0.0093
+        },
+        {
+          "turn": 3,
+          "input_tokens": 11600,
+          "cached_tokens": 10400,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00318,
+          "cost_without_cache": 0.010199999999999999
+        },
+        {
+          "turn": 4,
+          "input_tokens": 12800,
+          "cached_tokens": 11600,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00327,
+          "cost_without_cache": 0.011099999999999999
+        },
+        {
+          "turn": 5,
+          "input_tokens": 14000,
+          "cached_tokens": 12800,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00336,
+          "cost_without_cache": 0.012
+        },
+        {
+          "turn": 6,
+          "input_tokens": 15200,
+          "cached_tokens": 14000,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00345,
+          "cost_without_cache": 0.0129
+        },
+        {
+          "turn": 7,
+          "input_tokens": 16400,
+          "cached_tokens": 15200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00354,
+          "cost_without_cache": 0.0138
+        },
+        {
+          "turn": 8,
+          "input_tokens": 17600,
+          "cached_tokens": 16400,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00363,
+          "cost_without_cache": 0.0147
+        },
+        {
+          "turn": 9,
+          "input_tokens": 18800,
+          "cached_tokens": 17600,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0037199999999999998,
+          "cost_without_cache": 0.0156
+        },
+        {
+          "turn": 10,
+          "input_tokens": 20000,
+          "cached_tokens": 18800,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00381,
+          "cost_without_cache": 0.0165
+        },
+        {
+          "turn": 11,
+          "input_tokens": 21200,
+          "cached_tokens": 20000,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0039000000000000003,
+          "cost_without_cache": 0.017400000000000002
+        },
+        {
+          "turn": 12,
+          "input_tokens": 22400,
+          "cached_tokens": 21200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0039900000000000005,
+          "cost_without_cache": 0.0183
+        }
+      ]
+    },
+    "deepseek_flash_offpeak": {
+      "provider": "deepseek_flash_offpeak",
+      "label": "DeepSeek flash（空闲）",
+      "prices": {
+        "input": 0.15,
+        "cache_read": 0.003,
+        "cache_write": 0.15,
+        "output": 0.6,
+        "has_write_premium": false
+      },
+      "scenario": {
+        "stable_prefix": 8000,
+        "new_per_turn": 1200,
+        "output_per_turn": 400,
+        "turns": 12
+      },
+      "summary": {
+        "total_input_tokens_billed_as_context": 189600,
+        "total_cached_tokens": 167200,
+        "total_write_tokens": 0,
+        "total_ordinary_tokens": 22400,
+        "total_output_tokens": 4800,
+        "cost_with_cache_usd": 0.006742,
+        "cost_without_cache_usd": 0.03132,
+        "savings_usd": 0.024578,
+        "savings_pct": 78.48
+      },
+      "turns": [
+        {
+          "turn": 1,
+          "input_tokens": 9200,
+          "cached_tokens": 0,
+          "write_tokens": 0,
+          "ordinary_tokens": 9200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00162,
+          "cost_without_cache": 0.00162
+        },
+        {
+          "turn": 2,
+          "input_tokens": 10400,
+          "cached_tokens": 9200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00044760000000000004,
+          "cost_without_cache": 0.0018
+        },
+        {
+          "turn": 3,
+          "input_tokens": 11600,
+          "cached_tokens": 10400,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004512,
+          "cost_without_cache": 0.00198
+        },
+        {
+          "turn": 4,
+          "input_tokens": 12800,
+          "cached_tokens": 11600,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004548,
+          "cost_without_cache": 0.00216
+        },
+        {
+          "turn": 5,
+          "input_tokens": 14000,
+          "cached_tokens": 12800,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004584,
+          "cost_without_cache": 0.00234
+        },
+        {
+          "turn": 6,
+          "input_tokens": 15200,
+          "cached_tokens": 14000,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.000462,
+          "cost_without_cache": 0.00252
+        },
+        {
+          "turn": 7,
+          "input_tokens": 16400,
+          "cached_tokens": 15200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00046560000000000004,
+          "cost_without_cache": 0.0027
+        },
+        {
+          "turn": 8,
+          "input_tokens": 17600,
+          "cached_tokens": 16400,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004692,
+          "cost_without_cache": 0.00288
+        },
+        {
+          "turn": 9,
+          "input_tokens": 18800,
+          "cached_tokens": 17600,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004728,
+          "cost_without_cache": 0.0030600000000000002
+        },
+        {
+          "turn": 10,
+          "input_tokens": 20000,
+          "cached_tokens": 18800,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.0004764,
+          "cost_without_cache": 0.0032400000000000003
+        },
+        {
+          "turn": 11,
+          "input_tokens": 21200,
+          "cached_tokens": 20000,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00048,
+          "cost_without_cache": 0.0034200000000000003
+        },
+        {
+          "turn": 12,
+          "input_tokens": 22400,
+          "cached_tokens": 21200,
+          "write_tokens": 0,
+          "ordinary_tokens": 1200,
+          "output_tokens": 400,
+          "cost_with_cache": 0.00048360000000000005,
+          "cost_without_cache": 0.0036000000000000003
+        }
+      ]
+    }
+  },
+  "usage_field_demo": {
+    "usage": {
+      "input_tokens": 12000,
+      "output_tokens": 400,
+      "input_tokens_details": {
+        "cached_tokens": 8000,
+        "cache_write_tokens": 3000,
+        "cache_write_tokens_details": {
+          "ttl_30m_tokens": 3000,
+          "ttl_12h_tokens": 0
+        }
+      }
+    },
+    "ordinary_tokens": 1000,
+    "estimated_cost_usd": 0.0143
+  },
+  "fetched": "2026-10-30"
+}

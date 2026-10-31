@@ -1,0 +1,47 @@
+{
+  "ticket": "来自 alice@ex.com：上月订单 ORD-99102 发票金额多扣了 30 元，请帮忙核对账单。优先级希望高一点。",
+  "success": true,
+  "result": {
+    "category": "billing",
+    "priority": "high",
+    "customer_email": "alice@ex.com",
+    "summary": "发票金额不对，需要核对",
+    "order_id": "ORD-99102",
+    "needs_human": false
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "raw": "先分析一下……我觉得这是账单问题。\n{\"category\":\"Billing\",\"priority\":\"High\",\"customer_email\":\"alice@ex.com\",\"summary\":\"发票金额不对\"}",
+      "ok": false,
+      "error": "3 validation errors for TicketExtract\ncategory\n  Input should be 'billing', 'technical', 'account' or 'other' [type=enum, input_value='Billing', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/enum\npriority\n  Input should be 'low', 'medium', 'high' or 'urgent' [type=enum, input_value='High', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/enum\nsummary\n  String should have at least 8 characters [type=string_too_short, input_value='发票金额不对', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_too_short"
+    },
+    {
+      "attempt": 2,
+      "raw": "{\"category\":\"billing\",\"priority\":\"High\",\"customer_email\":\"alice@ex\",\"summary\":\"发票金额不对\",\"order_id\":\"123\"}",
+      "ok": false,
+      "error": "4 validation errors for TicketExtract\npriority\n  Input should be 'low', 'medium', 'high' or 'urgent' [type=enum, input_value='High', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/enum\ncustomer_email\n  Value error, customer_email 必须是合法邮箱形态 [type=value_error, input_value='alice@ex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nsummary\n  String should have at least 8 characters [type=string_too_short, input_value='发票金额不对', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_too_short\norder_id\n  Value error, order_id 形如 ORD-XXXXXX [type=value_error, input_value='123', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+    },
+    {
+      "attempt": 3,
+      "raw": "{\"category\":\"billing\",\"priority\":\"high\",\"customer_email\":\"alice@ex.com\",\"summary\":\"发票金额不对，需要核对\",\"order_id\":\"12345\",\"needs_human\":false}",
+      "ok": false,
+      "error": "1 validation error for TicketExtract\norder_id\n  Value error, order_id 形如 ORD-XXXXXX [type=value_error, input_value='12345', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+    },
+    {
+      "attempt": 4,
+      "raw": "{\"category\":\"billing\",\"priority\":\"high\",\"customer_email\":\"alice@ex.com\",\"summary\":\"发票金额不对，需要核对\",\"order_id\":\"ORD-99102\",\"needs_human\":false}",
+      "ok": true,
+      "error": null,
+      "parsed": {
+        "category": "billing",
+        "priority": "high",
+        "customer_email": "alice@ex.com",
+        "summary": "发票金额不对，需要核对",
+        "order_id": "ORD-99102",
+        "needs_human": false
+      }
+    }
+  ],
+  "model_calls": 4
+}

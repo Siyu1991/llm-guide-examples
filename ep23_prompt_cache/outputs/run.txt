@@ -1,0 +1,46 @@
+=== 提示缓存成本模拟（12 轮 Agent）===
+稳定前缀 8000 + 每轮新增 1200，输出 400/轮
+
+OpenAI gpt-6.1-sol
+  无缓存: $0.4272
+  有缓存: $0.1207
+  节省:   $0.3065 (71.7%)
+  缓存读 token 合计: 167,200
+
+Anthropic Claude Sonnet 5.5
+  无缓存: $0.4272
+  有缓存: $0.1207
+  节省:   $0.3065 (71.7%)
+  缓存读 token 合计: 167,200
+
+Google Gemini 3.8 Flash
+  无缓存: $0.1602
+  有缓存: $0.0473
+  节省:   $0.1129 (70.5%)
+  缓存读 token 合计: 167,200
+
+DeepSeek flash（空闲）
+  无缓存: $0.0313
+  有缓存: $0.0067
+  节省:   $0.0246 (78.5%)
+  缓存读 token 合计: 167,200
+
+--- usage 字段计费示例 (gpt-6.1-sol) ---
+{
+  "usage": {
+    "input_tokens": 12000,
+    "output_tokens": 400,
+    "input_tokens_details": {
+      "cached_tokens": 8000,
+      "cache_write_tokens": 3000,
+      "cache_write_tokens_details": {
+        "ttl_30m_tokens": 3000,
+        "ttl_12h_tokens": 0
+      }
+    }
+  },
+  "ordinary_tokens": 1000,
+  "estimated_cost_usd": 0.0143
+}
+
+结果已写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep23_prompt_cache/outputs/ep23_results.json

@@ -1,0 +1,230 @@
+{
+  "fetched": "2026-10-30",
+  "results": [
+    {
+      "scenario": {
+        "name": "客服 FAQ（知识常变）",
+        "knowledge_churn": "high",
+        "style_lock": false,
+        "monthly_queries": 50000,
+        "prompt_tokens": 800,
+        "output_tokens": 300,
+        "corpus_tokens": 5000000,
+        "retrieved_tokens": 1500,
+        "reembed_fraction_per_month": 0.2,
+        "ft_examples": 800,
+        "ft_tokens_per_example": 600,
+        "ft_epochs": 3,
+        "prompt_only_extra_tokens": 2000
+      },
+      "costs": {
+        "prompt": {
+          "setup_usd": 0.0,
+          "monthly_usd": 430.0,
+          "year1_usd": 5160.0,
+          "notes": "无训练费；上下文更长，命中率依赖提示质量"
+        },
+        "rag": {
+          "setup_usd": 0.65,
+          "monthly_usd": 410.13,
+          "year1_usd": 4922.21,
+          "breakdown": {
+            "setup_embed_usd": 0.65,
+            "monthly_llm_usd": 380.0,
+            "monthly_reembed_usd": 0.13,
+            "monthly_vectordb_usd": 30.0
+          },
+          "notes": "知识更新靠重建索引；向量库月费按托管假设"
+        },
+        "finetune": {
+          "setup_usd": 36.0,
+          "monthly_usd": 300.0,
+          "year1_usd": 3636.0,
+          "train_tokens": 1440000,
+          "notes": "训练按 gpt-4.1 微调价；推理输入价高于同代基线，需单独评估"
+        }
+      },
+      "decision": {
+        "scores": {
+          "prompt": 0,
+          "rag": 4,
+          "finetune": -2
+        },
+        "recommend": "rag",
+        "ranked": [
+          [
+            "rag",
+            4
+          ],
+          [
+            "prompt",
+            0
+          ],
+          [
+            "finetune",
+            -2
+          ]
+        ]
+      },
+      "prices_used": {
+        "ft_train_per_mtok": 25.0,
+        "ft_input_per_mtok": 3.0,
+        "ft_output_per_mtok": 12.0,
+        "base_input_per_mtok": 2.0,
+        "base_output_per_mtok": 10.0,
+        "embed_per_mtok": 0.13,
+        "vector_db_monthly_usd": 30.0
+      }
+    },
+    {
+      "scenario": {
+        "name": "内部公文风格改写（知识稳）",
+        "knowledge_churn": "low",
+        "style_lock": true,
+        "monthly_queries": 8000,
+        "prompt_tokens": 600,
+        "output_tokens": 400,
+        "corpus_tokens": 200000,
+        "retrieved_tokens": 800,
+        "reembed_fraction_per_month": 0.05,
+        "ft_examples": 1200,
+        "ft_tokens_per_example": 700,
+        "ft_epochs": 3,
+        "prompt_only_extra_tokens": 1200
+      },
+      "costs": {
+        "prompt": {
+          "setup_usd": 0.0,
+          "monthly_usd": 60.8,
+          "year1_usd": 729.6,
+          "notes": "无训练费；上下文更长，命中率依赖提示质量"
+        },
+        "rag": {
+          "setup_usd": 0.026,
+          "monthly_usd": 84.4013,
+          "year1_usd": 1012.8416,
+          "breakdown": {
+            "setup_embed_usd": 0.026,
+            "monthly_llm_usd": 54.4,
+            "monthly_reembed_usd": 0.0013,
+            "monthly_vectordb_usd": 30.0
+          },
+          "notes": "知识更新靠重建索引；向量库月费按托管假设"
+        },
+        "finetune": {
+          "setup_usd": 63.0,
+          "monthly_usd": 52.8,
+          "year1_usd": 696.6,
+          "train_tokens": 2520000,
+          "notes": "训练按 gpt-4.1 微调价；推理输入价高于同代基线，需单独评估"
+        }
+      },
+      "decision": {
+        "scores": {
+          "prompt": 0,
+          "rag": 0,
+          "finetune": 3
+        },
+        "recommend": "finetune",
+        "ranked": [
+          [
+            "finetune",
+            3
+          ],
+          [
+            "prompt",
+            0
+          ],
+          [
+            "rag",
+            0
+          ]
+        ]
+      },
+      "prices_used": {
+        "ft_train_per_mtok": 25.0,
+        "ft_input_per_mtok": 3.0,
+        "ft_output_per_mtok": 12.0,
+        "base_input_per_mtok": 2.0,
+        "base_output_per_mtok": 10.0,
+        "embed_per_mtok": 0.13,
+        "vector_db_monthly_usd": 30.0
+      }
+    },
+    {
+      "scenario": {
+        "name": "小流量试点（先验证）",
+        "knowledge_churn": "medium",
+        "style_lock": false,
+        "monthly_queries": 500,
+        "prompt_tokens": 1000,
+        "output_tokens": 350,
+        "corpus_tokens": 500000,
+        "retrieved_tokens": 1200,
+        "reembed_fraction_per_month": 0.1,
+        "ft_examples": 100,
+        "ft_tokens_per_example": 500,
+        "ft_epochs": 3,
+        "prompt_only_extra_tokens": 1500
+      },
+      "costs": {
+        "prompt": {
+          "setup_usd": 0.0,
+          "monthly_usd": 4.25,
+          "year1_usd": 51.0,
+          "notes": "无训练费；上下文更长，命中率依赖提示质量"
+        },
+        "rag": {
+          "setup_usd": 0.065,
+          "monthly_usd": 33.9565,
+          "year1_usd": 407.543,
+          "breakdown": {
+            "setup_embed_usd": 0.065,
+            "monthly_llm_usd": 3.95,
+            "monthly_reembed_usd": 0.0065,
+            "monthly_vectordb_usd": 30.0
+          },
+          "notes": "知识更新靠重建索引；向量库月费按托管假设"
+        },
+        "finetune": {
+          "setup_usd": 3.75,
+          "monthly_usd": 3.6,
+          "year1_usd": 46.95,
+          "train_tokens": 150000,
+          "notes": "训练按 gpt-4.1 微调价；推理输入价高于同代基线，需单独评估"
+        }
+      },
+      "decision": {
+        "scores": {
+          "prompt": 3,
+          "rag": 2,
+          "finetune": -2
+        },
+        "recommend": "prompt",
+        "ranked": [
+          [
+            "prompt",
+            3
+          ],
+          [
+            "rag",
+            2
+          ],
+          [
+            "finetune",
+            -2
+          ]
+        ]
+      },
+      "prices_used": {
+        "ft_train_per_mtok": 25.0,
+        "ft_input_per_mtok": 3.0,
+        "ft_output_per_mtok": 12.0,
+        "base_input_per_mtok": 2.0,
+        "base_output_per_mtok": 10.0,
+        "embed_per_mtok": 0.13,
+        "vector_db_monthly_usd": 30.0
+      }
+    }
+  ]
+}

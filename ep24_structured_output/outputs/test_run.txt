@@ -1,0 +1,12 @@
+test_converges (test_extract.TestRetry.test_converges) ... ok
+test_exhausts (test_extract.TestRetry.test_exhausts) ... ok
+test_bad_email (test_extract.TestSchema.test_bad_email) ... ok
+test_bad_enum (test_extract.TestSchema.test_bad_enum) ... ok
+test_bad_order (test_extract.TestSchema.test_bad_order) ... ok
+test_valid (test_extract.TestSchema.test_valid) ... ok
+test_strip (test_extract.TestStrip.test_strip) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK
