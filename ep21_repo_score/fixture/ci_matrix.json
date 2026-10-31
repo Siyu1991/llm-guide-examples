@@ -1,0 +1,18 @@
+{
+  "workflow": "ci",
+  "os": ["ubuntu-latest"],
+  "python": ["3.10", "3.11", "3.12"],
+  "recent_runs": [
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": false},
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": false},
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": false},
+    {"conclusion": "success", "tests_skipped": true},
+    {"conclusion": "success", "tests_skipped": true}
+  ],
+  "note": "虚构 CI 摘要，结构模仿公开 Actions 矩阵字段，不是某一真实仓库的实时数据"
+}
