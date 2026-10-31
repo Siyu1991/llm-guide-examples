@@ -1,0 +1,8 @@
+=== 流式 + 重试 ===
+success=True attempts=3
+  {'attempt': 1, 'ok': False, 'status': 429, 'retry_after': '0'}
+  {'attempt': 2, 'ok': False, 'status': 429, 'retry_after': '0'}
+  {'attempt': 3, 'ok': True, 'status': 200}
+text: hello-stream…ok
+idem: f5bc74ec-9701-4834-bfc3-cc5703f820c4
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep30_streaming_retry/outputs/ep30_results.json

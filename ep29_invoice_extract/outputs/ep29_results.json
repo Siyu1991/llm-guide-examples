@@ -1,0 +1,34 @@
+{
+  "sample_image": "/workspace/llm_guide/repo_tmp/llm-guide-examples/ep29_invoice_extract/sample_invoice.png",
+  "image_size": [
+    640,
+    400
+  ],
+  "patch_32_count": 260,
+  "note": "billable tokens = patch_count * model_multiplier (see OpenAI Images and vision docs)",
+  "attempts": [
+    {
+      "attempt": 1,
+      "raw": "{\"invoice_no\":\"inv-2026-1001\",\"seller\":\"Example Supplies Ltd.\",\"buyer\":\"Acme Retail Co.\",\"amount_cny\":128.50,\"invoice_date\":\"2026-10-30\"}",
+      "ok": true,
+      "error": null,
+      "parsed": {
+        "invoice_no": "INV-2026-1001",
+        "seller": "Example Supplies Ltd.",
+        "buyer": "Acme Retail Co.",
+        "amount_cny": 128.5,
+        "currency": "CNY",
+        "invoice_date": "2026-10-30"
+      }
+    }
+  ],
+  "success": true,
+  "result": {
+    "invoice_no": "INV-2026-1001",
+    "seller": "Example Supplies Ltd.",
+    "buyer": "Acme Retail Co.",
+    "amount_cny": 128.5,
+    "currency": "CNY",
+    "invoice_date": "2026-10-30"
+  }
+}

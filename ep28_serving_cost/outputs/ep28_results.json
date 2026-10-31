@@ -1,0 +1,114 @@
+{
+  "fetched": "2026-10-30",
+  "gpu_hourly_runpod_community": {
+    "A100_PCIe": 1.19,
+    "H100_PCIe": 1.99,
+    "RTX_4090": 0.34
+  },
+  "api_gpt61_sol": {
+    "input_per_mtok": 2.0,
+    "output_per_mtok": 10.0
+  },
+  "kv_estimates": [
+    {
+      "model": "llama-like-7b",
+      "batch": 1,
+      "seq": 4096,
+      "kv_gib": 0.5,
+      "bytes_per_token": 131072
+    },
+    {
+      "model": "llama-like-7b",
+      "batch": 8,
+      "seq": 4096,
+      "kv_gib": 4.0,
+      "bytes_per_token": 131072
+    },
+    {
+      "model": "llama-like-7b",
+      "batch": 32,
+      "seq": 2048,
+      "kv_gib": 8.0,
+      "bytes_per_token": 131072
+    },
+    {
+      "model": "llama-like-70b",
+      "batch": 1,
+      "seq": 4096,
+      "kv_gib": 1.25,
+      "bytes_per_token": 327680
+    },
+    {
+      "model": "llama-like-70b",
+      "batch": 8,
+      "seq": 4096,
+      "kv_gib": 10.0,
+      "bytes_per_token": 327680
+    },
+    {
+      "model": "llama-like-70b",
+      "batch": 32,
+      "seq": 2048,
+      "kv_gib": 20.0,
+      "bytes_per_token": 327680
+    }
+  ],
+  "breakeven_at_80k_out_tok_per_h": [
+    {
+      "gpu": "A100_PCIe",
+      "gpu_hourly_usd": 1.19,
+      "assumed_out_tokens_per_hour": 80000,
+      "api_equivalent_usd": 1.12,
+      "self_host_cheaper": false,
+      "breakeven_out_tokens_per_hour": 84999,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    },
+    {
+      "gpu": "H100_PCIe",
+      "gpu_hourly_usd": 1.99,
+      "assumed_out_tokens_per_hour": 80000,
+      "api_equivalent_usd": 1.12,
+      "self_host_cheaper": false,
+      "breakeven_out_tokens_per_hour": 142142,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    },
+    {
+      "gpu": "RTX_4090",
+      "gpu_hourly_usd": 0.34,
+      "assumed_out_tokens_per_hour": 80000,
+      "api_equivalent_usd": 1.12,
+      "self_host_cheaper": true,
+      "breakeven_out_tokens_per_hour": 24285,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    }
+  ],
+  "breakeven_at_400k_out_tok_per_h": [
+    {
+      "gpu": "A100_PCIe",
+      "gpu_hourly_usd": 1.19,
+      "assumed_out_tokens_per_hour": 400000,
+      "api_equivalent_usd": 5.6,
+      "self_host_cheaper": true,
+      "breakeven_out_tokens_per_hour": 84999,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    },
+    {
+      "gpu": "H100_PCIe",
+      "gpu_hourly_usd": 1.99,
+      "assumed_out_tokens_per_hour": 400000,
+      "api_equivalent_usd": 5.6,
+      "self_host_cheaper": true,
+      "breakeven_out_tokens_per_hour": 142142,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    },
+    {
+      "gpu": "RTX_4090",
+      "gpu_hourly_usd": 0.34,
+      "assumed_out_tokens_per_hour": 400000,
+      "api_equivalent_usd": 5.6,
+      "self_host_cheaper": true,
+      "breakeven_out_tokens_per_hour": 24285,
+      "notes": "忽略电费外的人力/闲置；tokens_out_per_hour 为假设吞吐"
+    }
+  ]
+}

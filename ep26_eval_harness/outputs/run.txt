@@ -1,0 +1,15 @@
+=== 回归评测 ===
+model_v1: pass_rate=100% judge_mean=0.900
+  g1 PASS judge=0.887
+  g2 PASS judge=0.912
+  g3 PASS judge=0.825
+  g4 PASS judge=0.987
+  g5 PASS judge=0.887
+model_v2: pass_rate=60% judge_mean=0.695
+  g1 PASS judge=0.8
+  g2 PASS judge=0.9
+  g3 FAIL judge=0.438
+  g4 PASS judge=0.925
+  g5 FAIL judge=0.412
+门禁: drop=40% gate_failed=True
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep26_eval_harness/outputs/ep26_results.json

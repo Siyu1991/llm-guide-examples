@@ -1,0 +1,88 @@
+{
+  "golden_size": 5,
+  "reports": {
+    "model_v1": {
+      "model": "model_v1",
+      "pass_rate": 1.0,
+      "judge_mean": 0.8996,
+      "cases": [
+        {
+          "case_id": "g1",
+          "pass_exactish": true,
+          "judge_score": 0.887,
+          "answer": "退货窗口是7天，签收次日起算。"
+        },
+        {
+          "case_id": "g2",
+          "pass_exactish": true,
+          "judge_score": 0.912,
+          "answer": "订单号形如 ORD-123456。"
+        },
+        {
+          "case_id": "g3",
+          "pass_exactish": true,
+          "judge_score": 0.825,
+          "answer": "目前不支持货到付款。"
+        },
+        {
+          "case_id": "g4",
+          "pass_exactish": true,
+          "judge_score": 0.987,
+          "answer": "客服工作时间 9:00-18:00（工作日）。"
+        },
+        {
+          "case_id": "g5",
+          "pass_exactish": true,
+          "judge_score": 0.887,
+          "answer": "默认运费 12元，满99包邮。"
+        }
+      ]
+    },
+    "model_v2": {
+      "model": "model_v2",
+      "pass_rate": 0.6,
+      "judge_mean": 0.695,
+      "cases": [
+        {
+          "case_id": "g1",
+          "pass_exactish": true,
+          "judge_score": 0.8,
+          "answer": "退货窗口是7天。"
+        },
+        {
+          "case_id": "g2",
+          "pass_exactish": true,
+          "judge_score": 0.9,
+          "answer": "请使用 ORD- 前缀的订单号。"
+        },
+        {
+          "case_id": "g3",
+          "pass_exactish": false,
+          "judge_score": 0.438,
+          "answer": "部分地区支持货到付款。"
+        },
+        {
+          "case_id": "g4",
+          "pass_exactish": true,
+          "judge_score": 0.925,
+          "answer": "工作日 9:00-18:00 在线。"
+        },
+        {
+          "case_id": "g5",
+          "pass_exactish": false,
+          "judge_score": 0.412,
+          "answer": "运费以结算页为准。"
+        }
+      ]
+    }
+  },
+  "regression_gate": {
+    "base": "model_v1",
+    "candidate": "model_v2",
+    "pass_rate_base": 1.0,
+    "pass_rate_candidate": 0.6,
+    "pass_rate_drop": 0.4,
+    "gate_failed": true,
+    "note": "以黄金集 contains 命中率为门禁；judge_mean 仅作对照，不单独放行"
+  }
+}

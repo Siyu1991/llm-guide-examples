@@ -1,0 +1,6 @@
+=== 注入 / 权限用例 ===
+direct_ignore: allowed=False reason=denied_risk:admin_for_role:agent
+indirect_doc: allowed=True reason=ok
+legitimate_read: allowed=True reason=ok
+viewer_cannot_refund: allowed=False reason=denied_risk:write_for_role:viewer
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep27_prompt_injection/outputs/ep27_results.json

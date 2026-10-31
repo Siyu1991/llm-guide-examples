@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "text": "hello-stream…ok",
+  "attempts": [
+    {
+      "attempt": 1,
+      "ok": false,
+      "status": 429,
+      "retry_after": "0"
+    },
+    {
+      "attempt": 2,
+      "ok": false,
+      "status": 429,
+      "retry_after": "0"
+    },
+    {
+      "attempt": 3,
+      "ok": true,
+      "status": 200
+    }
+  ],
+  "idempotency_key": "f5bc74ec-9701-4834-bfc3-cc5703f820c4"
+}

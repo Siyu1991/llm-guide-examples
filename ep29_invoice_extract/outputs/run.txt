@@ -1,0 +1,12 @@
+=== 票据抽取 ===
+image 640x400 patch32=260
+attempt 1: OK
+{
+  "invoice_no": "INV-2026-1001",
+  "seller": "Example Supplies Ltd.",
+  "buyer": "Acme Retail Co.",
+  "amount_cny": 128.5,
+  "currency": "CNY",
+  "invoice_date": "2026-10-30"
+}
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep29_invoice_extract/outputs/ep29_results.json

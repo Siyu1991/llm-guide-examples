@@ -1,0 +1,15 @@
+=== KV 显存估算（GiB）===
+llama-like-7b b=1 s=4096: 0.5 GiB
+llama-like-7b b=8 s=4096: 4.0 GiB
+llama-like-7b b=32 s=2048: 8.0 GiB
+llama-like-70b b=1 s=4096: 1.25 GiB
+llama-like-70b b=8 s=4096: 10.0 GiB
+llama-like-70b b=32 s=2048: 20.0 GiB
+=== 保本（假设 80k / 400k out tok/h）===
+80k A100_PCIe: GPU $1.19/h API≈$1.12 cheaper=False BE_out=84999
+80k H100_PCIe: GPU $1.99/h API≈$1.12 cheaper=False BE_out=142142
+80k RTX_4090: GPU $0.34/h API≈$1.12 cheaper=True BE_out=24285
+400k A100_PCIe: API≈$5.6 cheaper=True
+400k H100_PCIe: API≈$5.6 cheaper=True
+400k RTX_4090: API≈$5.6 cheaper=True
+写入 /workspace/llm_guide/repo_tmp/llm-guide-examples/ep28_serving_cost/outputs/ep28_results.json
