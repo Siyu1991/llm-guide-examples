@@ -36,3 +36,9 @@
 | --- | --- | --- | --- |
 | `ep16_pricing/` | 16 AI 产品怎么定价 | 按席位 / 按 token / 按结果的单位经济模拟：重尾用量、Agent 渗透、保本解决率 | numpy |
 | `ep17_open_model_econ/` | 17 开源公司怎么赚钱 | 用 DeepSeek 公开的一天推理数据复算成本利润率；保本付费占比、训练回本所需日付费 token、自建保本利用率 | numpy |
+
+## ep23–ep25
+
+* [ep23_prompt_cache](./ep23_prompt_cache/) — 提示缓存成本模拟
+* [ep24_structured_output](./ep24_structured_output/) — 结构化输出校验与重试
+* [ep25_finetune_vs_rag](./ep25_finetune_vs_rag/) — 微调 / RAG / 提示词成本计算器
